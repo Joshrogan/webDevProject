@@ -25,7 +25,9 @@ $result = mysqli_query($db, "SELECT * FROM Students WHERE Porter_ID=".$_SESSION[
     echo "<tr>";
     echo "<td>".$row['student_id']."</td>";
     echo "<td>".$row['Porter_ID']."</td>";
-    echo "<td><a href=\"edit.php?student_id=$row[student_id]\">Edit</a></td>";
+    echo "<td><a href=\"edit.php?student_id=$row[student_id]\">Edit</a>
+              <a href=\"delete.php?student_id=$row[student_id]\">Delete</a>
+        </td>";
 }
 ?>
 </table>
