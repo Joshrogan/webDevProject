@@ -16,7 +16,10 @@
             $sql = "INSERT INTO Porter (Username, Password) 
                 VALUES ('$username', '$password')";
             mysqli_query($db, $sql);
+            $result = mysqli_query($db, "SELECT * FROM Porter WHERE Username='$username'") or die("could not do it");
+            $row = mysqli_fetch_assoc($result);
             $_SESSION['username'] = $username;
+            $_SESSION['Porter_ID'] = $row['Porter_ID'];
             $_SESSION['valid'] = "Logged in";
             header('location: index.php');
         }
@@ -32,8 +35,10 @@
             $query = "SELECT * FROM Porter WHERE username='$username' AND password='$password'";
             $result = mysqli_query($db, $query);
             if (mysqli_num_rows($result) == 1) {
+                $row = mysqli_fetch_assoc($result);
                 $_SESSION['username'] = $username;
                 $_SESSION['valid'] = "Logged in";
+                $_SESSION['Porter_ID'] = $row['Porter_ID'];
                 header('location: index.php');
             } else {
                 echo "username/password is incorrect";
