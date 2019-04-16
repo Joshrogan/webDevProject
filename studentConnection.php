@@ -1,5 +1,4 @@
 <?php 
-    session_start(); 
 
     printf("Porter id is: %d\n", $_SESSION['Porter_ID']);
     $Porter_ID = $_SESSION['Porter_ID'];
@@ -12,7 +11,7 @@
     }
 
     if ($result = mysqli_query($db, "SELECT * FROM Students")) {
-        printf("Selct returned %d rows.\n", mysqli_num_rows($result));
+        printf("Select returned %d rows.\n", mysqli_num_rows($result));
         mysqli_free_result($result);
     }
     $sql = "SELECT * FROM Students where Porter_ID ='$Porter_ID'";

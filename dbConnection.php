@@ -20,7 +20,6 @@
             $row = mysqli_fetch_assoc($result);
             $_SESSION['username'] = $username;
             $_SESSION['Porter_ID'] = $row['Porter_ID'];
-            $_SESSION['valid'] = "Logged in";
             header('location: index.php');
         }
     }
@@ -37,7 +36,6 @@
             if (mysqli_num_rows($result) == 1) {
                 $row = mysqli_fetch_assoc($result);
                 $_SESSION['username'] = $username;
-                $_SESSION['valid'] = "Logged in";
                 $_SESSION['Porter_ID'] = $row['Porter_ID'];
                 header('location: index.php');
             } else {

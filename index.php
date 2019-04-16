@@ -10,18 +10,13 @@
     <title>Home Page</title>
 </head>
 <body>
-     <?php if (isset($_SESSION['valid'])): ?>
-        <?php
-            echo $_SESSION['valid'];
-            unset($_SESSION['valid']);
-        ?>
-    <?php endif ?>
-
     <?php if (isset($_SESSION['username'])): ?>
         <?php echo $_SESSION['username']; ?>
         <?php echo $_SESSION['Porter_ID']; ?>
         <a href="index.php?logout='1'">Logout</a>
     <?php endif ?>
+    <br><br>
+    <?php include ('studentConnection.php'); ?>
     
 </body>
 </html>
