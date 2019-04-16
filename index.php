@@ -11,12 +11,13 @@
 </head>
 <body>
     <?php if (isset($_SESSION['username'])): ?>
-        <?php echo $_SESSION['username']; ?>
-        <?php echo $_SESSION['Porter_ID']; ?>
+        Welcome <?php echo $_SESSION['username']; ?>
+        Porter_ID: <?php echo $_SESSION['Porter_ID']; ?>
         <a href="index.php?logout='1'">Logout</a>
     <?php endif ?>
     <br><br>
     <?php include ('studentConnection.php'); ?>
-    
+    <br><br>
+    <a href="add.html">Add Student</a>    
 </body>
 </html>
