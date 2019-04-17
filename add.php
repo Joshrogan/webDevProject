@@ -23,15 +23,19 @@ if(isset($_POST['Submit'])) {
     header('location: view.php');
 }
 ?>
+<!DOCTYPE html>
 <html>
 <head>
     <title>Add Student</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
 </head> 
 <body>
 <?php if (isset($_SESSION['username'])): ?>
+    <div class="topnav">
         <a href="index.php">Index</a>
         <a href="view.php">View</a>
         <a href="index.php?logout='1'">Logout</a>
+    </div>
 <?php endif ?>
     <a href="index.php">Home</a> 
     <br/><br/>

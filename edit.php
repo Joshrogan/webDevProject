@@ -23,14 +23,18 @@ if(isset($_POST['update'])) {
     }
 } 
 ?>
+<!DOCTYPE html>
 <html>
 <?php if (isset($_SESSION['username'])): ?>
+    <div class="topnav">
         <a href="index.php">Index</a>
         <a href="view.php">View</a>
         <a href="index.php?logout='1'">Logout</a>
+    </div>
 <?php endif ?>
 <head>
     <title>Edit Student</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 <?php
@@ -40,6 +44,9 @@ $result = mysqli_query($db, "SELECT * FROM Students WHERE student_id =$student_i
 
 while($row = mysqli_fetch_assoc($result)) {
     $Porter_ID = $row['Porter_ID'];
+    $First_Name = $row['First_Name'];
+    $Last_Name = $row['Last_Name'];
+    $Room_Number = $row['Room_Number'];
 }
 ?>
 
