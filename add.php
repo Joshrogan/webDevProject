@@ -37,21 +37,31 @@ if(isset($_POST['Submit'])) {
         <a href="index.php?logout='1'">Logout</a>
     </div>
 <?php endif ?>
-    <a href="index.php">Home</a> 
-    <br/><br/>
     
     <form action="add.php" method="post">
         <table>
-            <td>Student ID</td>
+            <tr>
+                <th></th>
+                <th>Add Student</th>
+            </tr>
+            <tr>
+                <td>Student ID</td>
                 <td><input type="text" name="Student_ID"></td>
-            <td>First Name</td>
+            </tr>
+            <tr>
+                <td>First Name</td>
                 <td><input type="text" name="First_Name"></td>
-            <td>Last Name</td>
+            </tr>
+            <tr>
+                <td>Last Name</td>
                 <td><input type="text" name="Last_Name"></td>
-            <td>Room Number</td>
+            </tr>
+            <tr>
+                <td>Room Number</td>
                 <td><input type="text" name="Room_Number"></td>
             </tr>
-            <tr> 
+            <tr>
+                <td></td> 
                 <td><input type="submit" name="Submit" value="Add"></td>
             </tr>
         </table>

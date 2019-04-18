@@ -18,7 +18,7 @@ if(isset($_POST['update'])) {
     if(empty($Porter_ID) || empty($First_Name) || empty($Last_Name) || empty($Room_Number)) {
         echo "fill in fields";
     } else {
-        $result = mysqli_query($db, "UPDATE Students SET Porter_ID='$Porter_ID', First_Name ='$First_Name', Last_Name='$Last_Name', Room_Number='$Room_Number' WHERE student_id=$student_id");
+        $result = mysqli_query($db, "UPDATE Students SET Porter_ID=$Porter_ID, First_Name ='$First_Name', Last_Name='$Last_Name', Room_Number='$Room_Number' WHERE student_id='$student_id'");
         header("location: view.php");
     }
 } 
@@ -40,7 +40,7 @@ if(isset($_POST['update'])) {
 <?php
 $student_id = $_GET['student_id'];
 
-$result = mysqli_query($db, "SELECT * FROM Students WHERE student_id =$student_id");
+$result = mysqli_query($db, "SELECT * FROM Students WHERE student_id='$student_id'");
 
 while($row = mysqli_fetch_assoc($result)) {
     $Porter_ID = $row['Porter_ID'];
@@ -53,8 +53,8 @@ while($row = mysqli_fetch_assoc($result)) {
 <form method="post" action="edit.php">
     <table>
         <tr>
-            <td>Student ID</td>
-            <td><input type="text" name="student_id" value="<?php echo $student_id;?>"></td>
+            <th>Student ID</th>
+            <th><?php echo $student_id;?></th>
         </tr>
         <tr>
             <td>Porter ID</td>
