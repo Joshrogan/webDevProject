@@ -1,3 +1,10 @@
+<!--
+File: login.php
+
+ Description:
+ This is where unregistered, unlogged in and unauthorized users are taken. Users can also access this
+page through the navbar and login
+-->
 <?php include('dbConnection.php'); ?>
 
 <!DOCTYPE html>

@@ -1,3 +1,11 @@
+<!-- 
+File: view.php
+
+Description:
+This page checks authentication then displays a list of all the students belonging to that users Porter ID
+via a table
+-->
+
 <?php session_start(); 
     
     if (empty($_SESSION['username'])) {

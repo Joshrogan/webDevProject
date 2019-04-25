@@ -1,3 +1,11 @@
+<!-- 
+File: register.php
+
+Description:
+
+This is where users can register a Porter user and have it added to the Porter database.
+
+ -->
 <?php include('dbConnection.php'); ?>
 <!DOCTYPE html>
 <html>

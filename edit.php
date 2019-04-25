@@ -1,3 +1,13 @@
+<!-- 
+File: edit.php
+
+Description:
+edit.php starts the session, makes sure the user is authenticated and logged in before displaying the edit page.
+
+Once they are authhenticated it displays the html page and form prefilled with the row data it has gotten from the
+database already. If the user has filled in every row and submits then the row us updated and the user is sent back
+to the view.php page.
+ -->
 <?php session_start(); 
 
     if (empty($_SESSION['username'])) {

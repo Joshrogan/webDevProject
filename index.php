@@ -1,3 +1,10 @@
+<!--  
+File: index.php
+ 
+Description:
+
+index.php is the initial page the user is shown once they log in, else they're redirected to login.php
+ -->
 <?php include('dbConnection.php'); 
 
     if (empty($_SESSION['username'])) {

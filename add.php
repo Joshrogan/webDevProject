@@ -1,3 +1,14 @@
+<!-- 
+File: add.php
+
+Description:
+
+add.php starts the session, makes sure the user is authenticated and logged in before displaying the page.
+
+Once they are authhenticated it displays the html page and form, when the user submits this form it's sends itself a post request
+with the information required. It verifies this then inserts it into the user's own Student database 
+-->
+
 <?php session_start(); 
 
     if (empty($_SESSION['username'])) {

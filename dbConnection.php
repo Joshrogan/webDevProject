@@ -1,3 +1,12 @@
+<!--
+File: dbConnection.php
+
+Description:
+
+dbConnection handles all the Porter sql db connections that are made through index.php, register.php and login.php
+it also handles destroying the session and logging out for the user.
+-->
+
 <?php
     session_start();
 
