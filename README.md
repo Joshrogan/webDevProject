@@ -5,4 +5,5 @@
 * Economic HTML/CSS styling
 
 
-![Alt text](screenshots/database01.png?raw=true "Optional title")
+![database schema](screenshots/database01.png "database schema")
+
