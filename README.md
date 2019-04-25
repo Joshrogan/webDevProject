@@ -7,3 +7,11 @@
 
 ![database schema](screenshots/database01.png "database schema")
 
+
+![view](screenshots/view.png "view")
+
+
+![edit](screenshots/edit.png "edit")
+
+
+![index](screenshots/index.png "index")
