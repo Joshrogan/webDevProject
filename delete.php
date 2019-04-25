@@ -1,10 +1,10 @@
-/* File: delete.php
- * Description:
- *
- * delete.php is called form the view.php page, once the user is authenticated it connects to the database
- * and deletes the specific student
- *
- * */
+<!-- 
+File: delete.php
+
+Description:
+delete.php is called form the view.php page, once the user is authenticated it connects to the database
+and deletes the specific studen
+ -->
 <?php session_start(); 
 
     if (empty($_SESSION['username'])) {
